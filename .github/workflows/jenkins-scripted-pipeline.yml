@@ -25,6 +25,7 @@ jobs:
            sleep 5 # Simulate work
 
   Results:
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - run: echo "Job completed at $(date)"
