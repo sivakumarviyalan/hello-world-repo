@@ -12,17 +12,19 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build-artwork:
-    # The type of runner that the job will run on
+  Greet:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Greet
-        run: echo 'Hello, World!'
-      - name: Build
-        run: |-
+      - run: echo 'Hello, World!'
+
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
            echo 'Pretending to build...'
-           sleep 5s # Simulate work
-      - name: Results
-        run: echo "Job completed at $(date)"
+           sleep 5 # Simulate work
+
+  Results:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job completed at $(date)"
